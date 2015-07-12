@@ -10,10 +10,10 @@ data <- subset(allData, subset=(DateTime >= as.POSIXct("2007-02-01") & DateTime 
 # plot to file
 with(data, {
   plot(Sub_metering_1 ~ DateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
-  lines(Sub_metering_2 ~ DateTime,col='Red')
-  lines(Sub_metering_3 ~ DateTime,col='Blue')
+  lines(Sub_metering_2 ~ DateTime, col='Red')
+  lines(Sub_metering_3 ~ DateTime, col='Blue')
   })
-legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, legend=c("Sub 1", "Sub 2", "Sub 3"))
 dev.copy(png, file="plot3.png", height=480, width=480)
 dev.off()
 
